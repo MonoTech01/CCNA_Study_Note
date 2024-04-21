@@ -19,3 +19,8 @@ Here's what ICMP messages can tell devices:
 - Destination Unreachable: Indicates a packet couldn't be delivered.
 - Source Quench: Signals a device to slow down data transmission.
 - Time Exceeded: A packet has "expired" due to too many hops.
+
+# Importance:
+Network Troubleshooting: ICMP is essential for diagnosing network problems and maintaining smooth communication.
+
+Optimizing Data Flow: ICMP helps devices adjust to network conditions, improving efficiency.
