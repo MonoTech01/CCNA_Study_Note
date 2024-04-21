@@ -143,6 +143,22 @@ Extended ACLs can be complex. Monitor ACL hit counters to ensure the ACL is work
 
 Plan, create, apply
 
+## Command
+General ACL Structure: access-list [number] [permit | deny] [protocol] [source] [destination] [options]
+
+number: Standard ACLs: 1-99; Extended ACLs: 100-199 or 2000-2699
+
+protocol: ICMP, TCP, UDP, or other supported protocols
+
+source: Source IP address (can use wildcards)
+
+destination: Destination IP address (can use wildcards)
+
+options:
+eq [port number]: Matches specific destination port (e.g., eq 80 for HTTP)
+
+log: Generates log messages for matched packets
+
 ### Example Scenario
 User - Bob (10.16.0.10)
 
