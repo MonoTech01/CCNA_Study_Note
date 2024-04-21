@@ -99,8 +99,10 @@ Example:
 
 access-list 2 deny 10.16.0.0 0.0.0.255 
 access-list 2 permit any
+
 This ACL blocks the entire 10.16.0.0/24 subnet and permits any other traffic.
 
 ## Important Notes
 Implicit Deny: Always include a permit any statement to avoid blocking everything.
+
 OSPF Connection: Wildcard masks work the same way in OSPF and standard ACLs. Understanding one helps with the other!
