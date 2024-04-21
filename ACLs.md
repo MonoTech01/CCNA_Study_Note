@@ -106,3 +106,39 @@ This ACL blocks the entire 10.16.0.0/24 subnet and permits any other traffic.
 Implicit Deny: Always include a permit any statement to avoid blocking everything.
 
 OSPF Connection: Wildcard masks work the same way in OSPF and standard ACLs. Understanding one helps with the other!
+
+# 4. Wildcard Masks for Irregular Subnets
+
+## Purpose
+When network addresses don't fall on neat octet boundaries (e.g., /21, /27), wildcard masks let you filter traffic based on those specific networks.
+
+## Key Similarity: The concept is identical to how wildcard masks are used in OSPF.
+
+## Steps:
+
+### Identify the subnet mask:
+In each octet, subtract the subnet mask value from 255 to get the wildcard mask value.
+
+Example: 10.16.0.0/21
+
+Subnet Mask: 255.255.248.0
+
+Wildcard Mask: 0.0.7.255
+
+### Applying Wildcards in ACLs
+
+Syntax:
+
+access-list [number] [permit | deny] [network address] [wildcard mask]
+
+Example Implementation:
+access-list 3 deny 10.16.0.0 0.0.7.255
+
+access-list 3 permit any 
+
+ip access-list 3 in 
+
+## Important Considerations
+Careful Planning: Misconfigured ACLs can break routing and network connectivity. Always plan, then create, then test.
+
+Implicit Deny: Include a permit any statement to avoid unintentionally blocking all traffic.
