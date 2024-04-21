@@ -1,4 +1,4 @@
-# ACLs Concepts
+# 1. ACLs Concepts
 ## Key Points
 Default Behavior: Traffic not explicitly permitted is denied by default.
 
@@ -30,3 +30,44 @@ If a match is found, action is taken (permit or deny).
 
 If no match is found, the packet is implicitly denied.
 
+
+# 2. Standard ACLs
+
+## Purpose
+Basic IP address-based traffic filtering on a router.
+
+Standard ACLs have an implicit deny any any at the end. If no ACL entry matches, the packet is dropped!
+
+Use the "host" keyword to specify individual IP addresses.
+
+Access lists are processed in order – the first match determines the permit/deny action.
+
+## Limitations:
+
+Can only match based on source IP address. Cannot filter based on destination address, protocols (TCP, UDP, etc.), or port numbers.
+
+## Basic ACL Structure
+
+### Plan:
+
+Define what traffic to permit/deny based on its source IP address.
+
+### Create:
+
+(config)# access-list [number 1-99] [permit | deny] [source address] 
+
+Example:
+
+(config)# access-list 1 deny host 10.16.0.10
+
+(config)# access-list 1 permit any 
+
+### Apply:
+
+(config-if)# ip access-group [number 1-99] [in | out]
+
+## Commands
+
+access-list [number] [permit | deny] [source address] - Creates an ACL entry
+
+ip access-group [number] [in | out] - Applies ACL to a router interface in the specified direction.
