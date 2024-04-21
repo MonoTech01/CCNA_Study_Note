@@ -22,5 +22,3 @@ Here's what ICMP messages can tell devices:
 
 # Importance:
 Network Troubleshooting: ICMP is essential for diagnosing network problems and maintaining smooth communication.
-
-Optimizing Data Flow: ICMP helps devices adjust to network conditions, improving efficiency.
