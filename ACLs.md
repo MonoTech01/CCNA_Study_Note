@@ -135,7 +135,6 @@ Extended ACLs provide fine-grained control over network traffic by filtering bas
 
 - Filtering Process
 
-## Important Note
 ## Important Notes
 Extended ACLs can be complex. Monitor ACL hit counters to ensure the ACL is working as intended. Always remember the implicit 'deny any any' at the end!
 
