@@ -71,3 +71,36 @@ Example:
 access-list [number] [permit | deny] [source address] - Creates an ACL entry
 
 ip access-group [number] [in | out] - Applies ACL to a router interface in the specified direction.
+
+# 3. Standard ACLs with Wildcard Masks
+
+## Purpose
+Filter traffic based on network address ranges rather than individual IP addresses, reducing the number of ACL entries needed.
+
+## How Wildcard Masks Work
+
+Inversion of Subnet Mask:  A wildcard mask is the opposite of a subnet mask.
+
+Where the subnet mask has a '1', the wildcard mask has a '0' (indicating a match)
+
+Where the subnet mask has a '0', the wildcard mask has a '1' (indicating "don't care")
+
+Example:
+
+10.16.0.0 /24 network
+Subnet Mask: 255.255.255.0
+Wildcard Mask: 0.0.0.255
+
+## ACL Syntax with Wildcard Mask
+
+access-list [number 1-99] [permit | deny] [network address] [wildcard mask]
+
+Example:
+
+access-list 2 deny 10.16.0.0 0.0.0.255 
+access-list 2 permit any
+This ACL blocks the entire 10.16.0.0/24 subnet and permits any other traffic.
+
+## Important Notes
+Implicit Deny: Always include a permit any statement to avoid blocking everything.
+OSPF Connection: Wildcard masks work the same way in OSPF and standard ACLs. Understanding one helps with the other!
