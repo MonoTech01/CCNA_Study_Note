@@ -177,4 +177,42 @@ access-list 100 deny tcp 10.16.0.10 192.168.1.100 eq 80
 
 access-list 100 permit ip any any
 
+# 6. NAMED ACLs
+
+## Purpose
+Provide a more manageable way to create and maintain ACLs, especially with multiple entries. Easier to manage and modify than numbered ACLs. You can insert or remove lines without rewriting the entire ACL. 
+
+## Important Note
+Use tools like show access-list to check hit counters.
+
+Test and troubleshoot to ensure the ACL is working as intended.
+
+Mind Your Routing: ACLs only work on interfaces where traffic is routed THROUGH the device. Beware of unintended bypasses!
+
+## Command
+
+ip access-list extended [name]
+
+[permit | deny] [protocol] [source] [destination] [options]
+
+Example: 
+
+ip access-list extended Our-ACL 
+
+deny tcp host 10.16.0.10 any eq 21   
+
+deny ip 10.16.0.0 0.0.0.255 10.16.16.0 0.0.7.255  
+
+deny icmp 10.16.0.0 0.0.0.255 10.16.2.0 0.0.0.255
+
+permit ip any any
+
+### Applying Named ACLs:
+
+interface [interface-id]
+
+ip access-group Our-ACL in 
+
+
+
 
