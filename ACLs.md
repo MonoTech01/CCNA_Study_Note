@@ -144,7 +144,7 @@ Extended ACLs can be complex. Monitor ACL hit counters to ensure the ACL is work
 Plan, create, apply
 
 ## Command
-General ACL Structure: access-list [number] [permit | deny] [protocol] [source] [destination] [options]
+access-list [number] [permit | deny] [protocol] [source] [destination] [options]
 
 number: Standard ACLs: 1-99; Extended ACLs: 100-199 or 2000-2699
 
