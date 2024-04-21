@@ -142,3 +142,57 @@ ip access-list 3 in
 Careful Planning: Misconfigured ACLs can break routing and network connectivity. Always plan, then create, then test.
 
 Implicit Deny: Include a permit any statement to avoid unintentionally blocking all traffic.
+
+# 5. Extended ACLs: Beyond Basic Filtering
+
+## Purpose
+Extended ACLs provide fine-grained control over network traffic by filtering based on a wide range of criteria.
+
+Key Capabilities:
+
+Match on source/destination IP addresses
+
+Match on Layer 3 protocols (ICMP, TCP, UDP, etc.)
+
+Match on Layer 4 port numbers (e.g., 80 for HTTP, 22 for SSH)
+
+Filter on even more specific criteria (like ICMP message types)
+
+Filtering Process
+
+## Performance
+
+### Planning
+Define your traffic filtering goals in detail. Consider: Source/Destination IP, Protocol, Port numbers, Other specific criteria as needed
+
+### Creation
+Use the appropriate ACL syntax to build entries with permit or deny actions.
+
+### Application:
+Attach the ACL to a router interface, specifying direction (in or out).
+
+### Example Scenario
+User: Bob (10.16.0.10)
+
+Goal:
+
+Block Bob's ICMP pings to 192.168.1.100
+
+Block Bob's HTTP (port 80) traffic to the same server
+
+Allow all other traffic from Bob
+
+ACL Entries
+
+access-list 100 deny icmp 10.16.0.10 192.168.1.100 any 
+
+access-list 100 deny tcp 10.16.0.10 192.168.1.100 eq 80
+
+access-list 100 permit ip any any
+
+## Important Notes
+Extended ACLs can be complex. Lab practice is essential.
+
+Monitor ACL hit counters to ensure the ACL is working as intended.
+
+Always remember the implicit 'deny any any' at the end!
