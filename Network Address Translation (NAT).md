@@ -12,15 +12,15 @@ NAT was developed to address the problem of IP address exhaustion in the IPv4 wo
 
 # Types of NAT
 ## NAT Overload (aka PAT):
-Most popular method.
-Shares a single public IP address among many internal devices by using port numbers.
-Devices on a private network are identified by a unique combination of IP address and port number (a socket).
+- Most popular method.
+- Shares a single public IP address among many internal devices by using port numbers.
+- Devices on a private network are identified by a unique combination of IP address and port number (a socket).
 ## Static NAT:
-Creates a one-to-one mapping between a private IP address and a public IP address.
-Typically used for allowing external access to internal servers (e.g., email or web servers).
+- Creates a one-to-one mapping between a private IP address and a public IP address.
+- Typically used for allowing external access to internal servers (e.g., email or web servers).
 ## Dynamic NAT:
-Translates a pool of internal addresses to a pool of public addresses.
-Can be used to hide address conflicts or accommodate larger pools of internal devices.
+- Translates a pool of internal addresses to a pool of public addresses.
+- Can be used to hide address conflicts or accommodate larger pools of internal devices.
 
 # Key Points to Remember
 NAT is a cornerstone of IPv4 networking.
