@@ -1,4 +1,4 @@
-# Upon completion of the Networking Basics course, students will be able to perform the following tasks:
+# Objectives
 
 Explain important concepts in network communication.
 
