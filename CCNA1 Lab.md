@@ -83,6 +83,7 @@ enable
 
 config t
 
+
 enable secret class12345
 
 service password-encryption
@@ -90,6 +91,7 @@ service password-encryption
 banner motd #Authorized Access Only#
 
 no ip domain-lookup
+
 
 line console 0
 
@@ -103,6 +105,7 @@ exec-timeout 60
 
 exit
 
+
 line vty 0 15
 
 password cisco12345
@@ -115,11 +118,13 @@ exec-timeout 60
 
 exit
 
+
 interface vlan 1
 
 ip address 192.168.1.157 255.255.255.240
 
 no shutdown
+
 
 ip default-gateway 192.168.1.158
 
