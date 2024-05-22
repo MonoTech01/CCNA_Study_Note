@@ -14,7 +14,7 @@ is the process of identifying, locating and correcting problems.  This process
 - Gather configuration and topology information
 - Physical and logical topology
 - Configuration files
-Log files
-Determine if there were any similar issues previously
-Steps taken
-Results achieved
+- Log files
+- Determine if there were any similar issues previously
+- Steps taken
+- Results achieved
