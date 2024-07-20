@@ -59,3 +59,7 @@ And much, much more...
             msg: "{{ device_output }}"
 # Which of the following is the smallest unit of operation used to define an action to take inside an Ansible playbook?
 - task
+
+# How does Ansible manage legacy Cisco devices?
+- Ansible connects to the device over SSH
+
