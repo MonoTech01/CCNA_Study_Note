@@ -26,4 +26,14 @@ And much, much more...
 # How can automation best solve the problem of configuration drift?
 - Automation can allow you to enforce the desired state of the network from a single, centralized node.
 
+# With respect to the "pull" model, what is the name given to the piece of software running on the managed device that is used to communicate back to the master node?
+- agent
+
+# Which of the following options best describes Ansible?
+- Ansible is an agentless automation tool that uses the "push" model
+
+# Which of the following is the name of the Ansible component used to define the set of tasks to be performed on the target devices?
+- playbook
+
+
 
