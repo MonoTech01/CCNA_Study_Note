@@ -15,6 +15,11 @@ Testing that all interfaces configured with IP addresses are in the "UP" state
 
 And much, much more...
 
+# Which of the following options are valid reasons to automate network management? (Choose all that apply)
+- Faster deployment of configuration changes
+- Reduction of costs
+- Reduces the probability of human error
+
 # Which of the following best describes "configuration drift"?
 Gradual changes over time that result in the running configuration diverging from the intended configuration.
 
