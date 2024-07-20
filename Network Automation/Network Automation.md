@@ -63,3 +63,6 @@ And much, much more...
 # How does Ansible manage legacy Cisco devices?
 - Ansible connects to the device over SSH
 
+# Ansible playbooks are written in...?
+YAML
+
