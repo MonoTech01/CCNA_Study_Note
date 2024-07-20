@@ -16,7 +16,9 @@ Testing that all interfaces configured with IP addresses are in the "UP" state
 And much, much more...
 
 # Which of the following best describes "configuration drift"?
-- Generating a device's configuration using programming languages
-- Updating configurations using an out-of-band channel
-- Gradual changes over time that result in the running configuration diverging from the intended configuration => Correct
-- Fully replacing a device's running configuration
+Gradual changes over time that result in the running configuration diverging from the intended configuration.
+
+# How can automation best solve the problem of configuration drift?
+Automation can allow you to enforce the desired state of the network from a single, centralized node.
+
+
