@@ -21,9 +21,9 @@ And much, much more...
 - Reduces the probability of human error
 
 # Which of the following best describes "configuration drift"?
-Gradual changes over time that result in the running configuration diverging from the intended configuration.
+- Gradual changes over time that result in the running configuration diverging from the intended configuration.
 
 # How can automation best solve the problem of configuration drift?
-Automation can allow you to enforce the desired state of the network from a single, centralized node.
+- Automation can allow you to enforce the desired state of the network from a single, centralized node.
 
 
