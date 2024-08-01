@@ -2,5 +2,4 @@
 - JSON
 - XML
 
-# Which of the following protocols use Transport Layer Security (TLS)?
-- HTTPS
+# Which of the following protocols use Transport Layer Security (TLS)? HTTPS
