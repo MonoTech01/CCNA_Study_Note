@@ -34,4 +34,11 @@ Deleting a VLAN on SW4 will result in an error because it's in client mode.
 Key Takeaway:
 VTP simplifies VLAN management but requires careful configuration to avoid unintended consequences. Understanding VTP modes and configuration revision numbers is crucial for successful implementation.
 
+After removing Switch-7 from the production network, you delete a few VLANs from that switch. Before adding that switch back into the network, what should you do to avoid accidental VLAN deletion on the remaining switches in the VTP domain?
 
+Make sure Switch-7 is using DTP
+Make sure Switch-7 is configured for 802.1Q encapsulation
+Make sure Switch-7 has a higher configuration revision number than the rest of the VTP domain
+Make sure Switch-7 is configured administratively as a trunk
+
+Make sure Switch-7 has a lower configuration revision number than the rest of the VTP domain => correct
