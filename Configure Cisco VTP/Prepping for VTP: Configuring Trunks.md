@@ -35,4 +35,6 @@ Trunk Mode: Set the interface mode to trunk to enable trunking.
 Console Connection: Have a console cable and terminal emulator ready as a backup in case remote connectivity is lost.
 Note: These configurations ensure all links between the switches are configured as trunks using 802.1Q encapsulation, allowing for VLAN information to be propagated once VTP is configured.
 
+The configuration commands are the same for trunking on 100Mbps (Fast Ethernet), 1,000Mbps (Gig Ethernet), and 10G interfaces.
+True
 
