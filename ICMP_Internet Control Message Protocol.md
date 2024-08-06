@@ -6,7 +6,9 @@ Here's what ICMP messages can tell devices:
 - "Mailbox full!" - ICMP lets a sender know the receiver can't accept more data at the moment.
 - "Is anybody home?" - ICMP helps devices check if another device is reachable on the network (like a ping).
 
+
 # Purpose:
+
 - Error Reporting: Reports problems with data packet delivery (e.g., "destination unreachable," "TTL expired").
 - Network Diagnostics: Provides feedback on network connectivity and routing issues.
 - "Ping" command: The most common use of ICMP – checks if a host is reachable and measures round-trip time.
