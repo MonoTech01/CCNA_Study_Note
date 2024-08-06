@@ -1,4 +1,6 @@
 # ICMP acts like a postal worker for your network devices. It doesn't deliver the actual data (like emails or videos), but it carries important messages about that data.
+
+
 Here's what ICMP messages can tell devices:
 - "Mail undelivered!" - ICMP informs a sender if their data packets didn't reach the destination.
 - "Mailbox full!" - ICMP lets a sender know the receiver can't accept more data at the moment.
