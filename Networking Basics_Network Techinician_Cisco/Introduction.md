@@ -21,15 +21,3 @@ Explain how IPv4 addresses are used in network communication and segmentation.
 Explain features of IPv6 addressing.
 
 Configure a DHCP server.
-
-Explain how routers connect networks together.
-
-Explain how ARP enables communication on a network.
-
-Create a fully connected LAN.
-
-Explain how clients access internet services.
-
-Explain the function of common application layer services.
-
-Use various tools to test and troubleshoot network connectivity.
